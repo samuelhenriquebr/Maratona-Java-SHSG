@@ -19,6 +19,6 @@ public class CalculadoraTest {
         calc.somaArray(numeros);
         calc.somaVarArgs(1,2,3,4,5);
         System.out.println("teste3");
-        System.out.println("testando");
+        System.out.println("ttttt");
     }
 }
