@@ -7,10 +7,9 @@ public class EstudanteTest {
         Estudante aluno = new Estudante();
         aluno.nome = "Samuel";
         aluno.idade = 18;
-        aluno.nota1 = 6;
-        aluno.nota2 = 9;
-        aluno.nota3 = 10;
+        //aluno.notas = new double[]{5,8,9};
 
         aluno.imprime();
+        aluno.tirarMedia();
     }
 }

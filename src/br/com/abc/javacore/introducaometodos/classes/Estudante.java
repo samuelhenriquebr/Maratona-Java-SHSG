@@ -3,25 +3,33 @@ package br.com.abc.javacore.introducaometodos.classes;
 public class Estudante {
     public String nome;
     public int idade;
-    public double nota1;
-    public double nota2;
-    public double nota3;
+    public double notas[];
 
-    public void imprime(){
-        System.out.println("Nome: "+this.nome);
-        System.out.println("Idade: "+this.idade);
-        System.out.println(this.nota1);
-        System.out.println(this.nota2);
-        System.out.println(this.nota3);
-
-        Double media;
-        media = (nota1+nota2+nota3)/3;
-        System.out.println("Média das notas: "+media);
-        if(media > 6){
-            System.out.println("Aprovado");
-        }else{
-            System.out.println("Reprovado");
+    public void imprime() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+        if (notas != null) {
+            for (double nota : notas) {
+                System.out.print(nota + " ");
+            }
         }
+    }
 
+    public void tirarMedia(){
+        if(notas == null){
+            System.out.println("Esse aluno não possui notas");
+            return;
+        }
+        double media =0;
+        for(double nota: notas){
+            media += nota;
+        }
+        media = media / notas.length;
+
+        if(media > 6){
+            System.out.println("\nMédia das notas: "+media+" situação: Aprovado");
+        }else{
+            System.out.println("\nMédia das notas: "+media+" situação: Reprovado");
+        }
     }
 }
