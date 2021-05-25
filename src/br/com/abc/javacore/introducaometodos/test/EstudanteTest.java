@@ -9,11 +9,13 @@ public class EstudanteTest {
         Estudante aluno = new Estudante();
         aluno.setNome("Samuel");
         aluno.setIdade(-1);
-        aluno.setNotas(new double[]{5,8,9});
+        aluno.setNotas(new double[]{5,8,3});
 
         aluno.imprime();
         aluno.tirarMedia();
 
         System.out.println(aluno.getNome());
+
+        System.out.println("Aprovado? "+aluno.isAprovado());
     }
 }

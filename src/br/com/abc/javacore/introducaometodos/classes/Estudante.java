@@ -4,6 +4,7 @@ public class Estudante {
     private String nome;
     private int idade;
     private double notas[];
+    private boolean aprovado;
 
     public void imprime() {
         System.out.println("Nome: " + this.nome);
@@ -28,18 +29,21 @@ public class Estudante {
         media = media / this.notas.length;
 
         if (media > 6) {
+            this.aprovado = true;
             System.out.println("\nMédia das notas: " + media + " situação: Aprovado");
         } else {
+            this.aprovado = false;
             System.out.println("\nMédia das notas: " + media + " situação: Reprovado");
         }
     }
 
+    //getters e setters
     public void setNome(String nome) {
         this.nome = nome;
     }
 
     public void setIdade(int idade) {
-        if(idade < 0){
+        if (idade < 0) {
             System.out.println("Você não pode fazer isso!");
             return;
         }
@@ -60,5 +64,9 @@ public class Estudante {
 
     public double[] getNotas() {
         return this.notas;
+    }
+
+    public boolean isAprovado(){
+        return this.aprovado;
     }
 }
