@@ -3,6 +3,9 @@ package br.com.abc.javacore.Hheranca.classes;
 public class Funcionarios extends Pessoa {
     private double salario;
 
+    public Funcionarios(String nome){
+        super(nome);
+    }
     public void imprime() {
         super.imprime();
         System.out.println("Salário: " + this.salario);

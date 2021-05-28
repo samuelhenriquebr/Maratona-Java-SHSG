@@ -5,8 +5,8 @@ public class Endereco {
     private String bairro;
     public void imprime(){
         System.out.println("Rua: "+this.rua);
-        Pessoa p = new Pessoa();
-        p.nome = "sasasa";
+        Pessoa p = new Pessoa("sasasa");
+
     }
     public String getRua() {
         return rua;
