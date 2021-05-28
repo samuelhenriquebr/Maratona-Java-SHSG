@@ -18,6 +18,8 @@ public class Seminario {
         System.out.println("Título: " + this.titulo);
         if (professor != null) {
             System.out.println("Professor palestrante: " + this.professor.getNome());
+        }else{
+            System.out.println("Nenhum professor");
         }
         if (local != null) {
             System.out.println("Local: " + this.local.getRua() + " Bairro: " + this.local.getBairro());
