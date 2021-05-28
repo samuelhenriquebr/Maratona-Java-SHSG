@@ -23,5 +23,6 @@ public class HerancaTest {
         f.setSalario(1500);
         f.setEndereco(end);
         f.imprime();
+
     }
 }
