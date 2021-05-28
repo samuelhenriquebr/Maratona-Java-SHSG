@@ -13,16 +13,27 @@ public class Seminario {
     public Seminario() {
     }
 
-    public void print(){
+    public void print() {
         System.out.println("----------Relatório de seminários---------------------");
-        System.out.println("Título: "+this.titulo);
-        System.out.println("Professor palestrante: "+this.professor.getNome());
-        System.out.println("Local: "+this.local.getRua()+" Bairro: "+this.local.getBairro());
-        System.out.println("------Alunos participantes--------");
-        for(Aluno aluno: alunos){
-            System.out.println(aluno.getNome());
+        System.out.println("Título: " + this.titulo);
+        if (professor != null) {
+            System.out.println("Professor palestrante: " + this.professor.getNome());
         }
+        if (local != null) {
+            System.out.println("Local: " + this.local.getRua() + " Bairro: " + this.local.getBairro());
+        } else {
+            System.out.println("Nenhum local cadastrado para esse seminário");
+        }
+        if (alunos != null && alunos.length != 0) {
+            System.out.println("------Alunos participantes--------");
+            for (Aluno aluno : alunos) {
+                System.out.println(aluno.getNome());
+            }
+            return;
+        }
+        System.out.println("Seminário não tem alunos inscritos");
     }
+
     public Professor getProfessor() {
         return professor;
     }
