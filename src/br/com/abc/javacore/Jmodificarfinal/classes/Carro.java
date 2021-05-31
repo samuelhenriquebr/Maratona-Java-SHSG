@@ -2,7 +2,7 @@ package br.com.abc.javacore.Jmodificarfinal.classes;
 
 public class Carro {
     private static final double VELOCIDADE_FINAL= 250;
-    public final Comprador comprador = new Comprador();
+    public final Comprador COMPRADOR = new Comprador();
     private String carro;
     private String marca;
 
@@ -18,7 +18,7 @@ public class Carro {
         System.out.println("Imprimindo um carro");
     }
     public Comprador getComprador() {
-        return comprador;
+        return COMPRADOR;
     }
 
     public String getCarro() {
