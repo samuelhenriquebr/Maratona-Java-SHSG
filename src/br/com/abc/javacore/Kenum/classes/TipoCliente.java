@@ -1,7 +1,13 @@
 package br.com.abc.javacore.Kenum.classes;
 
 public enum TipoCliente {
-    PESSOA_FISICA(1, "Pessoa Física"), PESSOA_JURIDICA(2, "Pessoa Jurídica");
+    //constant specific class body
+    //corpo de classe especifico constante
+    PESSOA_FISICA(1, "Pessoa Física"), PESSOA_JURIDICA(2, "Pessoa Jurídica"){
+        public String getId(){
+            return "B";
+        }
+    };
     //Não pode criar atributos antes da enumeração
     private int tipo;
     private String nome;
@@ -10,6 +16,10 @@ public enum TipoCliente {
         this.nome = nome;
     }
 
+
+    public String getId (){
+        return "A";
+    }
     public String getNome() {
         return nome;
     }
