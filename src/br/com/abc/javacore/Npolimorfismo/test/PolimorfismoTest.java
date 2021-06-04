@@ -17,8 +17,5 @@ public class PolimorfismoTest {
         System.out.println("--------------------");
         relatorio.relatorioPagamentoGenerico(v);
 
-        Funcionario f = g;
-        System.out.println("##########");
-        System.out.println(f.getSalario());
     }
 }
