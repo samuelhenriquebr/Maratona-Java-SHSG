@@ -1,4 +1,4 @@
-package br.com.abc.javacore.Oexception.test;
+package br.com.abc.javacore.Oexception.error.test;
 
 public class ErroTest {
     public static void main(String[] args) {
