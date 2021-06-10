@@ -21,9 +21,17 @@ public class ExpressoesRegularesTest {
         // $ fim de linha
         // o(v|c)o = ovo, oco
         // maca(rr|c)ão = macarrão, macacão
+        // . coringa 1.3 = 123, 133, 1A3, 1#3, 1 3
         int numeroHex = 0x1;
-        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
-        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
+//        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
+//        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
+//        String regex = "(\\w\\.)+@([a-zA-Z])+(\\.([a-zA-z])+)+";
+//        String regex = "([a-zA-Z0-9\\._-])+@([a-zA-Z])+(\\.([a-zA-z])+)+";
+//        String texto = "fulano@hotmail.com, 12Abc@gmail.com, #@!abrao@mail.br, teste@gmail.com.br, teste@mal";
+        String regex = "\\d{2}/\\d{2}/\\d{2,4}";
+        String texto = "05/10/2010 05/05/2015 01/05/95"; // dd/MM/yyyy
+
+        System.out.println("Email válido? "+"#@!abrao@mail.br".matches(regex));
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("texto: "+texto);
