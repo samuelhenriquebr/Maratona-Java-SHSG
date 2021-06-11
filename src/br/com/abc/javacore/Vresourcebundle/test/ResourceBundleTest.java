@@ -21,5 +21,7 @@ public class ResourceBundleTest {
         //messages_pt_BR.properties
         //messages_pt.properties
         //messages.properties
+
+
     }
 }
